@@ -15,6 +15,9 @@ import {  AngularFireModule   } from '@angular/fire'
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { PacientesRegistradosComponent } from './components/pacientes-registrados/pacientes-registrados.component';
+import { RegistrarCitasComponent } from './components/registrar-citas/registrar-citas.component';
+import { VerificarCitasComponent } from './components/verificar-citas/verificar-citas.component';
+import { EditarCitasComponent } from './components/editar-citas/editar-citas.component';
 
 
 
@@ -25,7 +28,10 @@ import { PacientesRegistradosComponent } from './components/pacientes-registrado
     RegistrarPacienteComponent,
     PrincipalComponent,
     ActualizarPacienteComponent,
-    PacientesRegistradosComponent
+    PacientesRegistradosComponent,
+    RegistrarCitasComponent,
+    VerificarCitasComponent,
+    EditarCitasComponent
   ],
   imports: [
     BrowserModule,

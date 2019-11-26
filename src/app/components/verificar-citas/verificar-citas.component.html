@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1>Control de citas</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nombre del paciente</th>
+                            <th> Fecha de la cita</th>
+                            <th>Opciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let cita of Citas; let i=index">
+                            <td>{{cita.NombrePaciente}}</td>
+                            <td>{{cita.Fecha| date:'dd/MM/yyyy'}}</td>
+                            <td>
+                                <button type="button" (click)="ActualizarCita(cita.id)" class="btn btn-outline-warning"><i class="fa fa-edit"></i></button>
+                                <button type="button" (click)="EliminarCita(cita.id)" class="btn btn-outline-danger ml-2"><i class="fa fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

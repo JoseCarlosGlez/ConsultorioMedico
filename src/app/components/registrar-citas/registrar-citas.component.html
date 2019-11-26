@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="jumbotron">
+
+        <div class="row">
+            <div class="col-8">
+                <h1>Registrar Cita</h1>
+            </div>
+            <div class="col-4 text-right">
+                <button type="button" routerLink="/principal" class="btn btn-outline-danger">Regresar a inicio</button>
+            </div>
+        </div>
+
+        <div class="row mt-3" [formGroup]="Formulario">
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="">Nombre del paciente</label>
+                    <input type="text" class="form-control" placeholder="Ingrese el nombre del paciente" formControlName="NombrePaciente" aria-describedby="helpId" [ngClass]="{
+                        'is-invalid': Formulario.get('NombrePaciente').errors,
+                        'is-valid': !Formulario.get('NombrePaciente').errors
+                      }">
+
+                    <div *ngIf="Formulario.get('NombrePaciente').hasError('required')" class="invalid-feedback d-block">
+                        Este campo es necesario
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="">Hora de la cita: </label>
+                    <input type="datetime-local" formControlName="Fecha" class="form-control" placeholder="" aria-describedby="helpId" [ngClass]="{
+                        'is-invalid': Formulario.get('Fecha').errors,
+                        'is-valid': !Formulario.get('Fecha').errors
+                      }">
+
+                    <div *ngIf="Formulario.get('Fecha').hasError('required')" class="invalid-feedback d-block">
+                        Este campo es necesario
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <button type="button" [disabled]="!Formulario.valid" (click)="GuardarCita()" class="btn btn-outline-success btn-lg btn-block">
+                        <i class="fa fa-save"></i>  Guardar Cita
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+</div>

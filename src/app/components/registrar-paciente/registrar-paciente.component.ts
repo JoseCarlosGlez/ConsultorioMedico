@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import Swal from 'sweetalert2';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 
 
@@ -20,13 +20,14 @@ export class RegistrarPacienteComponent implements OnInit {
 
   ngOnInit() {
     this.Formulario= new FormGroup({
-      nombre: new FormControl(),
-      apPaterno: new FormControl(),
-      apMaterno: new FormControl(),
-      email: new FormControl(),
-      domicilio: new FormControl(),
-      estatura: new FormControl(),
-      peso: new FormControl()
+      nombre: new FormControl(null, [Validators.required,Validators.pattern(/^[a-zA-Z\s]*$/)]),
+      apPaterno: new FormControl(null, [Validators.required,Validators.pattern(/^[a-zA-Z\s]*$/)]),
+      apMaterno: new FormControl(null, [Validators.required,Validators.pattern(/^[a-zA-Z\s]*$/)]),
+      email: new FormControl(null, [Validators.required,Validators.pattern(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)]),
+      domicilio: new FormControl(null, [Validators.required]),
+      estatura: new FormControl(null, [Validators.required,Validators.pattern(/^[0-9]*$/)]),
+      peso: new FormControl(null, [Validators.required,Validators.pattern(/^[0-9]*$/)])
+    
 
     })
   }

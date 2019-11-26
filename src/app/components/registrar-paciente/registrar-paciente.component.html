@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="jumbotron bg-secondary text-light">
+    <div class="jumbotron">
         <div class="row">
             <div class="col-9">
                 <h1>Registrar Paciente</h1>
@@ -16,45 +16,112 @@
             <div class="col-12">
                 <div class="form-group">
                     <label for="">Nombre del paciente:</label>
-                    <input type="text" formControlName="nombre" class="form-control" placeholder="" aria-describedby="helpId" />
+                    <input type="text" formControlName="nombre" class="form-control" placeholder="" aria-describedby="helpId" [ngClass]="{
+                      'is-invalid': Formulario.get('nombre').errors,
+                      'is-valid': !Formulario.get('nombre').errors
+                    }" />
+
+
+                    <div *ngIf="Formulario.get('nombre').hasError('pattern')" class="invalid-feedback d-block">
+                        Formato incorrecto
+                    </div>
+                    <div *ngIf="Formulario.get('nombre').hasError('required')" class="invalid-feedback d-block">
+                        Este campo es necesario
+                    </div>
                 </div>
             </div>
             <div class="col-12">
                 <div class="form-group">
                     <label for="">Apellido paterno del paciente:</label>
-                    <input type="text" formControlName="apPaterno" class="form-control" placeholder="" aria-describedby="helpId" />
+                    <input type="text" formControlName="apPaterno" class="form-control" placeholder="" aria-describedby="helpId" [ngClass]="{
+                      'is-invalid': Formulario.get('apPaterno').errors,
+                      'is-valid': !Formulario.get('apPaterno').errors
+                    }" />
+                    <div *ngIf="Formulario.get('apPaterno').hasError('pattern')" class="invalid-feedback d-block">
+                        Formato incorrecto
+                    </div>
+                    <div *ngIf="Formulario.get('apPaterno').hasError('required')" class="invalid-feedback d-block">
+                        Este campo es necesario
+                    </div>
                 </div>
             </div>
             <div class="col-12">
                 <div class="form-group">
                     <label for="">Apellido Materno del paciente:</label>
-                    <input type="text" formControlName="apMaterno" class="form-control" placeholder="" aria-describedby="helpId" />
+                    <input type="text" formControlName="apMaterno" class="form-control" placeholder="" aria-describedby="helpId" [ngClass]="{
+                      'is-invalid': Formulario.get('apMaterno').errors,
+                      'is-valid': !Formulario.get('apMaterno').errors
+                    }" />
+                    <div *ngIf="Formulario.get('apMaterno').hasError('pattern')" class="invalid-feedback d-block">
+                        Formato incorrecto
+                    </div>
+                    <div *ngIf="Formulario.get('apMaterno').hasError('required')" class="invalid-feedback d-block">
+                        Este campo es necesario
+                    </div>
                 </div>
             </div>
             <div class="col-12">
                 <div class="form-group">
                     <label for="">Domicilio:</label>
-                    <input type="text" formControlName="domicilio" class="form-control" placeholder="" aria-describedby="helpId" />
+                    <input type="text" formControlName="domicilio" class="form-control" placeholder="" aria-describedby="helpId" [ngClass]="{
+                      'is-invalid': Formulario.get('domicilio').errors,
+                      'is-valid': !Formulario.get('domicilio').errors
+                    }" />
+
+                    <div *ngIf="Formulario.get('domicilio').hasError('required')" class="invalid-feedback d-block">
+                        Este campo es necesario
+                    </div>
                 </div>
             </div>
             <div class="col-12">
                 <div class="form-group">
                     <label for="">Email:</label>
-                    <input type="text" formControlName="email" class="form-control" placeholder="" aria-describedby="helpId" />
+                    <input type="text" formControlName="email" class="form-control" placeholder="" aria-describedby="helpId" [ngClass]="{
+                      'is-invalid': Formulario.get('email').errors,
+                      'is-valid': !Formulario.get('email').errors
+                    }" />
+
+                    <div *ngIf="Formulario.get('email').hasError('pattern')" class="invalid-feedback d-block">
+                        Formato incorrecto
+                    </div>
+                    <div *ngIf="Formulario.get('email').hasError('required')" class="invalid-feedback d-block">
+                        Este campo es necesario
+                    </div>
                 </div>
             </div>
             <div class="col-12">
                 <div class="form-group">
                     <label for="">Estatura:</label>
-                    <input type="number" formControlName="estatura" class="form-control" placeholder="" aria-describedby="helpId" />
+                    <input type="number" formControlName="estatura" class="form-control" placeholder="" aria-describedby="helpId" [ngClass]="{
+                      'is-invalid': Formulario.get('estatura').errors,
+                      'is-valid': !Formulario.get('estatura').errors
+                    }" />
+
+                    <div *ngIf="Formulario.get('estatura').hasError('pattern')" class="invalid-feedback d-block">
+                        Porfavor solo numeros.
+                    </div>
+                    <div *ngIf="Formulario.get('estatura').hasError('required')" class="invalid-feedback d-block">
+                        Este campo es necesario
+                    </div>
                 </div>
             </div>
             <div class="col-12">
                 <div class="form-group">
                     <label for="">Peso:</label>
-                    <input type="number" formControlName="peso" class="form-control" placeholder="" aria-describedby="helpId" />
+                    <input type="number" formControlName="peso" class="form-control" placeholder="" aria-describedby="helpId" [ngClass]="{
+                      'is-invalid': Formulario.get('peso').errors,
+                      'is-valid': !Formulario.get('peso').errors
+                    }" />
+
+                    <div *ngIf="Formulario.get('peso').hasError('pattern')" class="invalid-feedback d-block">
+                        Porfavor solo numeros.
+                    </div>
+                    <div *ngIf="Formulario.get('peso').hasError('required')" class="invalid-feedback d-block">
+                        Este campo es necesario
+                    </div>
                 </div>
             </div>
+
 
             <div class="col-12">
                 <button type="button" class="btn btn-success btn-lg btn-block" (click)="SaveUser()">
