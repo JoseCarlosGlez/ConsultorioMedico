@@ -1,0 +1,66 @@
+<div class="container">
+    <div class="jumbotron bg-secondary text-light">
+        <div class="row">
+            <div class="col-9">
+                <h1>Registrar Paciente</h1>
+            </div>
+            <div class="col-3 text-center">
+                <button type="button" class="btn btn-danger" routerLink="/principal">
+          Regresar a inicio
+        </button>
+            </div>
+        </div>
+        <hr />
+
+        <div class="row" [formGroup]="Formulario">
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="">Nombre del paciente:</label>
+                    <input type="text" formControlName="nombre" class="form-control" placeholder="" aria-describedby="helpId" />
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="">Apellido paterno del paciente:</label>
+                    <input type="text" formControlName="apPaterno" class="form-control" placeholder="" aria-describedby="helpId" />
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="">Apellido Materno del paciente:</label>
+                    <input type="text" formControlName="apMaterno" class="form-control" placeholder="" aria-describedby="helpId" />
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="">Domicilio:</label>
+                    <input type="text" formControlName="domicilio" class="form-control" placeholder="" aria-describedby="helpId" />
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="">Email:</label>
+                    <input type="text" formControlName="email" class="form-control" placeholder="" aria-describedby="helpId" />
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="">Estatura:</label>
+                    <input type="number" formControlName="estatura" class="form-control" placeholder="" aria-describedby="helpId" />
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="">Peso:</label>
+                    <input type="number" formControlName="peso" class="form-control" placeholder="" aria-describedby="helpId" />
+                </div>
+            </div>
+
+            <div class="col-12">
+                <button type="button" class="btn btn-success btn-lg btn-block" (click)="SaveUser()">
+          Guardar Paciente
+        </button>
+            </div>
+        </div>
+    </div>
+</div>

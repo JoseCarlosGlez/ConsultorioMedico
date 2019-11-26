@@ -1,0 +1,63 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Consultorio Medico</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Paciente</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                    <a class="dropdown-item" routerLink="/registrarPaciente">Registrar Paciente</a>
+                    <a class="dropdown-item" routerLink="/registroPaciente">Actualizar Paciente</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Citas</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                    <a class="dropdown-item" href="#">Registrar Cita</a>
+                    <a class="dropdown-item" href="#">Actualizar Cita</a>
+                    <a class="dropdown-item" href="#">Cancelar Cita</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<div class="jumbotron contenedor">
+
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1>Bienvenido</h1>
+        </div>
+    </div>
+
+    <div id="carouselExampleIndicators" class="carousel slide h-25" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active h-50">
+                <img class="d-block w-100" src="../../../assets/img/Consultorio1.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item h-50">
+                <img class="d-block w-100" src="../../../assets/img/consultorio2.jpg" alt="Third slide">
+            </div>
+            <div class="carousel-item h-50">
+                <img class="d-block w-100" src="../../../assets/img/medico.jpg" alt="Third slide">
+
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+</div>

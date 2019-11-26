@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="jumbotron mt-5" data-aos="zoom-in">
+
+        <div class="row text-center">
+            <div class="col-12">
+                <h3>Bienvenido</h3>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12">
+
+                <div class="form-group text-center">
+
+                    <h5> Usuario</h5>
+                    <input type="text" class="form-control" #username placeholder="Ingrese su nombre de usuario" aria-describedby="helpId">
+                </div>
+            </div>
+            <div class="col-12">
+
+                <div class="form-group text-center">
+                    <h5>Contraseña</h5>
+                    <input type="password" class="form-control" #password placeholder="Ingrese su contraseña" aria-describedby="helpId">
+                </div>
+            </div>
+            <div class="col-12">
+                <button type="button" (click)="GotoPrincipal(username.value, password.value)" class="btn btn-outline-success btn-lg btn-block">Ingresar</button>
+            </div>
+        </div>
+    </div>
+</div>
