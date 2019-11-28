@@ -91,6 +91,38 @@
             </div>
             <div class="col-12">
                 <div class="form-group">
+                    <label for="">Edad:</label>
+                    <input type="text" formControlName="edad" class="form-control" placeholder="" aria-describedby="helpId" [ngClass]="{
+                      'is-invalid': Formulario.get('edad').errors,
+                      'is-valid': !Formulario.get('edad').errors
+                    }" />
+
+                    <div *ngIf="Formulario.get('edad').hasError('pattern')" class="invalid-feedback d-block">
+                        Formato incorrecto
+                    </div>
+                    <div *ngIf="Formulario.get('edad').hasError('required')" class="invalid-feedback d-block">
+                        Este campo es necesario
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="">Telefono:</label>
+                    <input type="text" formControlName="telefono" class="form-control" placeholder="" aria-describedby="helpId" [ngClass]="{
+                      'is-invalid': Formulario.get('telefono').errors,
+                      'is-valid': !Formulario.get('telefono').errors
+                    }" />
+
+                    <div *ngIf="Formulario.get('telefono').hasError('pattern')" class="invalid-feedback d-block">
+                        Formato incorrecto
+                    </div>
+                    <div *ngIf="Formulario.get('telefono').hasError('required')" class="invalid-feedback d-block">
+                        Este campo es necesario
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-group">
                     <label for="">Estatura:</label>
                     <input type="number" formControlName="estatura" class="form-control" placeholder="" aria-describedby="helpId" [ngClass]="{
                       'is-invalid': Formulario.get('estatura').errors,
@@ -124,7 +156,7 @@
 
 
             <div class="col-12">
-                <button type="button" class="btn btn-success btn-lg btn-block" (click)="SaveUser()">
+                <button type="button" [disabled]="!Formulario.valid" class="btn btn-success btn-lg btn-block" (click)="SaveUser()">
           Guardar Paciente
         </button>
             </div>

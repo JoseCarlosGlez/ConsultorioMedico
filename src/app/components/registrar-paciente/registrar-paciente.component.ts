@@ -24,6 +24,8 @@ export class RegistrarPacienteComponent implements OnInit {
       apPaterno: new FormControl(null, [Validators.required,Validators.pattern(/^[a-zA-Z\s]*$/)]),
       apMaterno: new FormControl(null, [Validators.required,Validators.pattern(/^[a-zA-Z\s]*$/)]),
       email: new FormControl(null, [Validators.required,Validators.pattern(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)]),
+      edad: new FormControl(null, [Validators.required,Validators.maxLength(2),Validators.pattern(/^[0-9]*$/)]),
+      telefono: new FormControl(null, [Validators.required]),
       domicilio: new FormControl(null, [Validators.required]),
       estatura: new FormControl(null, [Validators.required,Validators.pattern(/^[0-9]*$/)]),
       peso: new FormControl(null, [Validators.required,Validators.pattern(/^[0-9]*$/)])

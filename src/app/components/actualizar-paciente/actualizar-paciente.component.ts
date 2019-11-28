@@ -37,6 +37,8 @@ export class ActualizarPacienteComponent implements OnInit {
       domicilio: new FormControl(null, [Validators.required]),
       estatura: new FormControl(null, [Validators.required,Validators.pattern(/^[0-9]*$/)]),
       peso: new FormControl(null, [Validators.required,Validators.pattern(/^[0-9]*$/)]),
+      edad: new FormControl(null, [Validators.required,Validators.maxLength(2),Validators.pattern(/^[0-9]*$/)]),
+      telefono: new FormControl(null, [Validators.required]),
       diagnostico: new FormControl(),
       tratamiento: new FormControl()
     })
